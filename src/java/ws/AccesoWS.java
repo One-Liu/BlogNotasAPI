@@ -16,6 +16,7 @@ import pojos.Respuesta;
 import pojos.SesionToken;
 import pojos.Usuario;
 import seguridad.AutorizacionTokenJWT;
+import seguridad.SMS;
 
 @Path("basic/acceso")
 public class AccesoWS {
@@ -65,6 +66,7 @@ public class AccesoWS {
             }
             
             if(usuarioRegistrado) {
+                SMS.sendOTP(usuario.getCelular(), usuario.getOtp());
                 respuesta.setError(false);
                 respuesta.setMensaje("Registro exitoso");
             } else {
@@ -146,6 +148,7 @@ public class AccesoWS {
                 respuesta.setError(true);
                 respuesta.setMensaje("Credenciales invalidas");
             } else {
+                respuesta.setUsuario(usuarioRecuperado);
                 SesionToken sesionToken = new SesionToken();
                 sesionToken.setIdUsuario(respuesta.getUsuario().getIdUsuario());
                 sesionToken.setNombres(respuesta.getUsuario().getNombres());
@@ -158,7 +161,6 @@ public class AccesoWS {
                 } else {
                     respuesta.setError(false);
                     respuesta.setMensaje("Bienvenido: " + sesionToken.getNombres());
-                    respuesta.setUsuario(usuarioRecuperado);
                     respuesta.setSesionToken(sesionToken);
                 }
             }

@@ -9,6 +9,9 @@ import java.util.logging.Logger;
 public class DataBaseConnection {
 
     private Connection connection;
+    private static final String DIRECTION = System.getenv("BLOGNOTAS_DIRECTION");
+    private static final String USER = System.getenv("BLOGNOTAS_USER");
+    private static final String PASS = System.getenv("BLOGNOTAS_PASSWORD");
 
     public Connection getConnection() throws SQLException {
         connect();
@@ -22,9 +25,9 @@ public class DataBaseConnection {
             Logger.getLogger(DataBaseConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
         connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/blognotas", 
-                "blogNotasUser", 
-                "-Z5ttJu(0t");
+                DIRECTION, 
+                USER, 
+                PASS);
     }
 
     public void closeConection() {
