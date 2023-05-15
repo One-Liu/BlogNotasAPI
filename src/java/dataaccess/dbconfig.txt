@@ -1,0 +1,3 @@
+Direction = jdbc:mysql://localhost:3306/blognotas
+User = blogNotasUser
+Password = -Z5ttJu(0t
