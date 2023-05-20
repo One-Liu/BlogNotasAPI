@@ -8,6 +8,8 @@ public class Respuesta {
     private SesionToken sesionToken;
     private Usuario usuario;
     private ArrayList<Libreta> libretas;
+    private ArrayList<Prioridad> prioridades;
+    private ArrayList<Nota> notas;
 
     public Respuesta() {
     }
@@ -55,5 +57,21 @@ public class Respuesta {
 
     public void setLibretas(ArrayList<Libreta> libretas) {
         this.libretas = libretas;
+    }
+
+    public ArrayList<Nota> getNotas() {
+        return notas;
+    }
+
+    public void setNotas(ArrayList<Nota> notas) {
+        this.notas = notas;
+    }
+
+    public ArrayList<Prioridad> getPrioridades() {
+        return prioridades;
+    }
+
+    public void setPrioridades(ArrayList<Prioridad> prioridades) {
+        this.prioridades = prioridades;
     }
 }

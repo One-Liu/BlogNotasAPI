@@ -3,19 +3,19 @@ package pojos;
 import java.sql.Timestamp;
 
 public class Nota {
-    private int idNota;
+    private Integer idNota;
     private String titulo;
     private String contenido;
     private Timestamp tiempoCreacion;
-    private int idUsuarioCreacion;
-    private int eliminado;
-    private int idLibreta;
-    private int idPrioridad;
+    private Integer idUsuarioCreacion;
+    private Integer eliminado;
+    private Integer idLibreta;
+    private Integer idPrioridad;
 
     public Nota() {
     }
 
-    public Nota(int idNota, String titulo, String contenido, Timestamp tiempoCreacion, int idUsuarioCreacion, int eliminado, int idLibreta, int idPrioridad) {
+    public Nota(Integer idNota, String titulo, String contenido, Timestamp tiempoCreacion, Integer idUsuarioCreacion, Integer eliminado, Integer idLibreta, Integer idPrioridad) {
         this.idNota = idNota;
         this.titulo = titulo;
         this.contenido = contenido;
@@ -26,11 +26,11 @@ public class Nota {
         this.idPrioridad = idPrioridad;
     }
 
-    public int getIdNota() {
+    public Integer getIdNota() {
         return idNota;
     }
 
-    public void setIdNota(int idNota) {
+    public void setIdNota(Integer idNota) {
         this.idNota = idNota;
     }
 
@@ -58,35 +58,35 @@ public class Nota {
         this.tiempoCreacion = tiempoCreacion;
     }
 
-    public int getIdUsuarioCreacion() {
+    public Integer getIdUsuarioCreacion() {
         return idUsuarioCreacion;
     }
 
-    public void setIdUsuarioCreacion(int idUsuarioCreacion) {
+    public void setIdUsuarioCreacion(Integer idUsuarioCreacion) {
         this.idUsuarioCreacion = idUsuarioCreacion;
     }
 
-    public int getEliminado() {
+    public Integer getEliminado() {
         return eliminado;
     }
 
-    public void setEliminado(int eliminado) {
+    public void setEliminado(Integer eliminado) {
         this.eliminado = eliminado;
     }
 
-    public int getIdLibreta() {
+    public Integer getIdLibreta() {
         return idLibreta;
     }
 
-    public void setIdLibreta(int idLibreta) {
+    public void setIdLibreta(Integer idLibreta) {
         this.idLibreta = idLibreta;
     }
 
-    public int getIdPrioridad() {
+    public Integer getIdPrioridad() {
         return idPrioridad;
     }
 
-    public void setIdPrioridad(int idPrioridad) {
+    public void setIdPrioridad(Integer idPrioridad) {
         this.idPrioridad = idPrioridad;
     }
 }
